@@ -8,7 +8,7 @@ include: "rules/common.smk"
 
 module mapping_workflow:
     snakefile:
-        github("xsitarcik/mapping", path="workflow/Snakefile", tag=config["module_versions"]["mapping"])
+        github("cuspuk/workflow_mapping", path="workflow/Snakefile", tag=config["module_versions"]["mapping"])
     config:
         config
 
