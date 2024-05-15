@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.1](https://github.com/cuspuk/workflow_variants/compare/v2.3.0...v2.3.1) (2024-05-15)
+
+
+### Bug Fixes
+
+* fixes after repo transfer ([9a2ac32](https://github.com/cuspuk/workflow_variants/commit/9a2ac32bbee177bb6f8ce16051f5279fe135372e))
+
 ## [2.3.0](https://github.com/xsitarcik/variants/compare/v2.2.0...v2.3.0) (2024-05-12)
 
 
