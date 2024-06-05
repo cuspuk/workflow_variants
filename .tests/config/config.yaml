@@ -212,5 +212,5 @@ threads:
   variants__mutect2: 4
 
 module_versions:
-  reads: "v3.4.5" # str(v3.4.4): Version of reads module.
+  reads: "v3.5.0" # str(v3.4.4): Version of reads module.
   mapping: "v3.0.1" # str(v3.0.0): Version of mapping module.
