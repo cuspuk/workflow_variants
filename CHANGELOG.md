@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.2](https://github.com/cuspuk/workflow_variants/compare/v2.3.1...v2.3.2) (2024-06-05)
+
+
+### Bug Fixes
+
+* allow decontamination switch ([53891ca](https://github.com/cuspuk/workflow_variants/commit/53891ca5092c5aff92aea0c347ae368c60739091))
+
 ## [2.3.1](https://github.com/cuspuk/workflow_variants/compare/v2.3.0...v2.3.1) (2024-05-15)
 
 
