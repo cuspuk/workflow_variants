@@ -96,7 +96,7 @@ def get_outputs():
             )
         else:
             outputs["concat_consensus_bcftools"] = expand(
-                f"results/_aggregation/consensus/{{reference}}_{{tool}}.fa",
+                "results/_aggregation/consensus/{reference}_{tool}.fa",
                 reference=references,
                 tool=val,
             )
