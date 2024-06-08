@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.3](https://github.com/cuspuk/workflow_variants/compare/v2.3.2...v2.3.3) (2024-06-08)
+
+
+### Bug Fixes
+
+* fix consensus outputs for bcftools tools ([b754656](https://github.com/cuspuk/workflow_variants/commit/b754656a301d63f6d2b46f3a080d29774e9f68bc))
+
 ## [2.3.2](https://github.com/cuspuk/workflow_variants/compare/v2.3.1...v2.3.2) (2024-06-05)
 
 
