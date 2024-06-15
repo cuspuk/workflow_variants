@@ -15,7 +15,7 @@ rule freebayes__call_vcf:
     resources:
         mem_mb=get_mem_mb_for_freebayes,
     wrapper:
-        "v3.7.0/bio/freebayes"  # THIS should stay frozen as v3.8.0 version has memory issues
+        "v3.12.1/bio/freebayes"  # THIS should stay frozen as v3.8.0 version has memory issues
 
 
 rule freebayes__annotate_vcf:
@@ -57,7 +57,7 @@ rule freebayes__filter_vcf:
         "logs/variants_freebayes/filter_vcf/{reference}/{sample}.log",
     threads: get_threads_for_freebayes()
     wrapper:
-        "v3.12.0/bio/bcftools/filter"
+        "v3.12.1/bio/bcftools/filter"
 
 
 rule freebayes__view_filtered:
@@ -78,4 +78,4 @@ rule freebayes__view_filtered:
         "logs/variants_freebayes/view_filtered/{reference}/{sample}.log",
     threads: get_threads_for_freebayes()
     wrapper:
-        "v3.12.0/bio/bcftools/view"
+        "v3.12.1/bio/bcftools/view"
