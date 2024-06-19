@@ -1,13 +1,13 @@
 reads: # Specify the order and methods for each read processing step. If no method is specified, the step will not be performed.
   subsampling: null # null/enum: Subsampling method, if not set, subsampling will not be performed. Allowed: 'seqtk'.
   trimming: "cutadapt" # null/enum: Trimming method, if not set, trimming will not be performed. Allowed: 'cutadapt'.
-  decontamination: "kraken" # null/enum: Decontamination method, if not set, decontamination will not be performed. Allowed: 'kraken'.
+  decontamination: "kraken" # null/enum: Decontamination method, if not set, decontamination will not be performed. Allowed: 'kraken', 'bwa'.
   deduplication: null # null/enum: Deduplication method, if not set, deduplication will not be performed. Allowed: 'fastuniq'.
   _generate_fastqc_for: ["original", "decontamination"] # list of enum: Specify which steps to generate fastqc for. Allowed: 'original','subsampling','trimming','decontamination','deduplication'.
 
 mapping:
   mapping: "bwa" # enum(bwa): Mapping tool to use. Allowed: 'bwa'.
-  reference_fasta_paths:
+  reference_fasta_paths: # list of min 1 str([]): References to map against. Provide paths to the reference fasta files.
     - "/data/projects/uvz_meningitidis/reference/neisseria_meningitidis/neisseria_meningitidis.fa"
   deduplication: "picard" # null/enum: Deduplication method to use. Allowed: 'picard'.
   _generate_qualimap: true # bool(true): If true, qualimap will be generated for the last step.
@@ -63,6 +63,11 @@ reads__decontamination__kraken: # Relevant only if reads->decontamination is set
   save_memory: true # bool(true): If true, kraken limits RAM memory usage but sacrifices speed.
   generate_krona: false # bool(false): If true, krona is generated from kraken report.
   krona_dir: "/data/genome/taxonomy/krona/2023-12-03/" # null/str: Directory where krona dataset is located, or where will be downloaded.
+
+reads__decontamination__bwa: # Relevant only if reads->decontamination is set to bwa.
+  references: # list of min 1 str: List of reference fasta files.
+    - "/data/genome/human/grch38/grch38.fa"
+  filter_mode: "exclude" # enum(exclude): Mapped reads are either excluded or included. Allowed: 'include','exclude'.
 
 reads__deduplication__fastuniq: {} # Relevant only if reads->deduplication is set to fastuniq. There are no parameters to be defined.
 
@@ -211,5 +216,5 @@ threads:
   variants__mutect2: 4 # int: Number of threads to use for mutect2 variants.
 
 module_versions:
-  reads: "v3.5.0" # str(v3.5.0): Version of reads module.
-  mapping: "v3.0.1" # str(v3.0.1): Version of mapping module.
+  reads: "v3.6.0" # str(v3.6.0): Version of reads module.
+  mapping: "v3.1.1" # str(v3.1.1): Version of mapping module.
