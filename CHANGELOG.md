@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.4](https://github.com/cuspuk/workflow_variants/compare/v2.3.3...v2.3.4) (2024-06-19)
+
+
+### Performance Improvements
+
+* bumped config ([b7b8198](https://github.com/cuspuk/workflow_variants/commit/b7b8198e012e22262aeb339c4ad31eafcd2f1e1f))
+
 ## [2.3.3](https://github.com/cuspuk/workflow_variants/compare/v2.3.2...v2.3.3) (2024-06-08)
 
 
