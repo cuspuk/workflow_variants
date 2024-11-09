@@ -17,4 +17,4 @@ rule multiqc__report:
     log:
         "logs/multiqc/{reference}.log",
     wrapper:
-        "v3.12.0/bio/multiqc"
+        "v5.0.1/bio/multiqc"
