@@ -5,4 +5,4 @@ channels:
 dependencies:
   - coreutils
   - sed =4.8
-  - gawk =5.3.0
+  - gawk =5.3.1

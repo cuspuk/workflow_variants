@@ -14,4 +14,4 @@ rule bcftools__stats:
     log:
         "logs/variants_stats/{reference}/{tool}/{sample}_{step}.log",
     wrapper:
-        "v3.12.0/bio/bcftools/stats"
+        "v5.0.1/bio/bcftools/stats"
