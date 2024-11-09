@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.5](https://github.com/cuspuk/workflow_variants/compare/v2.3.4...v2.3.5) (2024-11-09)
+
+
+### Performance Improvements
+
+* autobump conda envs and/or wrappers ([a72efbc](https://github.com/cuspuk/workflow_variants/commit/a72efbc4203e342a66ec292e4f97e3e58e12d408))
+
 ## [2.3.4](https://github.com/cuspuk/workflow_variants/compare/v2.3.3...v2.3.4) (2024-06-19)
 
 
