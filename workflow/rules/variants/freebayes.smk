@@ -15,7 +15,7 @@ rule freebayes__call_vcf:
     resources:
         mem_mb=get_mem_mb_for_freebayes,
     wrapper:
-        "v5.0.1/bio/freebayes"  # THIS should stay frozen as v3.8.0 version has memory issues
+        "v3.7.0/bio/freebayes"  # THIS should stay frozen as v3.8.0 version has memory issues
 
 
 rule freebayes__annotate_vcf:
