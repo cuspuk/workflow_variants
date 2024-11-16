@@ -7,7 +7,7 @@ checkpoint samtools__index_reference:
         "logs/samtools/index_reference/{reference}.log",
     localrule: True
     wrapper:
-        "v5.0.1/bio/samtools/faidx"
+        "v5.1.0/bio/samtools/faidx"
 
 
 rule ivar__consensus_per_segment:
