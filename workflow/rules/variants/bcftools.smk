@@ -13,7 +13,7 @@ rule bcftools__mpileup_bcf:
     log:
         "logs/variants_bcftools/mpileup_bcf/{reference}/{sample}.log",
     wrapper:
-        "v5.0.1/bio/bcftools/mpileup"
+        "v7.2.0/bio/bcftools/mpileup"
 
 
 rule bcftools__call_variants:
@@ -28,7 +28,7 @@ rule bcftools__call_variants:
     log:
         "logs/variants_bcftools/call_variants/{reference}/{sample}.log",
     wrapper:
-        "v5.0.1/bio/bcftools/call"
+        "v7.2.0/bio/bcftools/call"
 
 
 rule bcftools__gatk_prepare_vcf:
@@ -45,7 +45,7 @@ rule bcftools__gatk_prepare_vcf:
         extra="",
         java_opts="",
     wrapper:
-        "v5.0.1/bio/gatk/selectvariants"
+        "v7.2.0/bio/gatk/selectvariants"
 
 
 rule bcftools__normalize_vcf:
@@ -62,7 +62,7 @@ rule bcftools__normalize_vcf:
         "logs/variants_bcftools/normalize_vcf/{reference}/{sample}.log",
     threads: get_threads_for_bcftools()
     wrapper:
-        "v5.0.1/bio/bcftools/norm"
+        "v7.2.0/bio/bcftools/norm"
 
 
 rule bcftools__annotate_vcf:
@@ -104,7 +104,7 @@ rule bcftools__filter_vcf:
         "logs/variants_bcftools/filter_vcf/{reference}/{sample}.log",
     threads: get_threads_for_bcftools()
     wrapper:
-        "v5.0.1/bio/bcftools/filter"
+        "v7.2.0/bio/bcftools/filter"
 
 
 rule bcftools__view_filtered:
@@ -125,4 +125,4 @@ rule bcftools__view_filtered:
         "logs/variants_bcftools/view_filtered_vcf/{reference}/{sample}.log",
     threads: get_threads_for_bcftools()
     wrapper:
-        "v5.0.1/bio/bcftools/view"
+        "v7.2.0/bio/bcftools/view"
